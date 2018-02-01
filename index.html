@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>An interactive web page</title>
+        <style>
+            #colorbox {width: 200px; height: 200px;}
+            .gray {background: gray;}
+            .blue {background: rgb(67, 111, 255);}
+            .pink {background: pink;}
+        </style>
+    </head>
+    <body>
+        <h1>An interactive web page</h1>
+
+        <h2>Color changer</h2>
+        <button id="graybutton">Gray</button>
+        <button id="bluebutton">Blue</button>
+        <div id="colorbox" class="gray"></div>        
+        <script>
+            /* TODO 1
+             *
+             * Add another button (and the associated event handler)
+             * to support an additional color: pink
+             */
+            graybutton.onclick = setGray;
+            bluebutton.onclick = setBlue;
+
+            function setGray() {
+                colorbox.className = "gray";
+            }
+
+            function setBlue() {
+                colorbox.className = "blue";
+            }
+        </script>
+
+        <hr>
+
+        <h2></h2>
+    </body>
+</html>
