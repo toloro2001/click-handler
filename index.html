@@ -3,7 +3,7 @@
     <head>
         <title>An interactive web page</title>
         <style>
-            #colorbox {width: 200px; height: 200px;}
+            #color_box {width: 200px; height: 200px;}
             .gray {background: gray;}
             .blue {background: rgb(67, 111, 255);}
             .pink {background: pink;}
@@ -12,30 +12,55 @@
     <body>
         <h1>An interactive web page</h1>
 
-        <h2>Color changer</h2>
-        <button id="graybutton">Gray</button>
-        <button id="bluebutton">Blue</button>
-        <div id="colorbox" class="gray"></div>        
+        <h2>1. Color changer</h2>
+        <button id="gray_button">Gray</button>
+        <button id="blue_button">Blue</button>
+        <div id="color_box" class="gray"></div>        
         <script>
+            gray_button.onclick = function() {
+                color_box.className = "gray";
+            };
+            blue_button.onclick = function () {
+                color_box.className = "blue";
+            }
             /* TODO 1
              *
-             * Add another button (and the associated event handler)
+             * Add a third button (and the associated event handler)
              * to support an additional color: pink
              */
-            graybutton.onclick = setGray;
-            bluebutton.onclick = setBlue;
+        </script>
 
-            function setGray() {
-                colorbox.className = "gray";
-            }
+        <hr>
 
-            function setBlue() {
-                colorbox.className = "blue";
+        <h2>2. Counter</h2>
+        <button id="counter_button">This fabulous button</button>
+        has been clicked <span id="countspan">0</span> times.
+        <script>
+            var count=0;
+            counter_button.onclick = function() {
+                /* TODO 2
+                 *
+                 * Fill in this function so that it increments
+                 * (adds one to) the variable named count,
+                 * then updates the text content of "countspan"
+                 * to show the current value of "count".
+                 */
             }
         </script>
 
         <hr>
 
-        <h2></h2>
+        <h2>3. Even or Odd?</h2>
+        <button id="even_or_odd_button">Is the count even or odd?</button>
+        <script>
+            even_or_odd_button.onclick = function() {
+                /* TODO 3
+                 *
+                 * Fill in this function so that it shows an
+                 * alert dialog stating whether the count
+                 * (from part 2, above) is even or odd.
+                 */
+            }
+        </script>
     </body>
 </html>
