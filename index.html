@@ -17,6 +17,8 @@
         <button id="blue_button">Blue</button>
         <div id="color_box" class="gray"></div>        
         <script>
+            const gray_button = document.getElementById("gray_button");
+            const blue_button = document.getElementById("blue_button");
             gray_button.onclick = function() {
                 color_box.className = "gray";
             };
@@ -37,6 +39,7 @@
         has been clicked <span id="countspan">0</span> times.
         <script>
             var count=0;
+            const counter_button = document.getElementById("counter_button");
             counter_button.onclick = function() {
                 /* TODO 2
                  *
@@ -53,6 +56,7 @@
         <h2>3. Even or Odd?</h2>
         <button id="even_or_odd_button">Is the count even or odd?</button>
         <script>
+            const even_or_odd_button = document.getElementById("even_or_odd_button");
             even_or_odd_button.onclick = function() {
                 /* TODO 3
                  *
